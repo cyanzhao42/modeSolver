@@ -27,7 +27,7 @@ M = round(dim(2) / h) + 1; %num of y dim grid points
 beta = 20; %%pml strength
 BC = {{'pml', [pml_thickness(1), beta]}, {'pml', [pml_thickness(2), beta]}}; %%boundry condition {x,y}
 
-% epsilon = ones(M,N); % one can define the epsilon here
+% epsilon = ones(M,N); % one can define the epsilon here, material should be away from PML
 eps = readmatrix('test_TE.txt'); 
 imagesc(eps);
 [szy,szx] = size(eps);
